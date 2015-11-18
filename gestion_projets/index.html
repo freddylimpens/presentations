@@ -4,10 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
-
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<title>Gestion de projets collaboratifs - Freddy Limpens</title>
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Code syntax highlighting -->
@@ -42,122 +39,270 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+				<section style="display:none">
+					# idées
 
+					## grands principes de la gestion de projets
+
+					* approche agile:
+						- historique: dépasser l'effet "tunel" avec le développement:
+							- cahier des charges
+							- longue période de dev
+							- livraison puis changements + difficile et nombreux car déconnection
+						- décrire tache à l'aide de "user stories" (quand c'est possible:
+							" It captures the 'who', 'what' and 'why' of a requirement in a simple, concise way, often limited in detail by what can be hand-written on a small paper notecard."
+						- Planning is guessing
+						=> découper un gros projet en courtes itérations
+						=> planifier les taches d'une ité entre parties prenantes (product honor)
+						=> impliquer le "client" dans la planification des taches
+						- stand up meeting quotidien pour avancement (max 10min)
+						- meetings are toxic BUT face to face communication is the most efficient:
+						=> use the right tool for the right thing:
+							- planning
+							- writing docs w/ many people
+							- broadcast info
+							- ask questions (chat, forum like, etc)
+							- email comes last
+						=> favor informal exchange where big ideas are discussed,
+						weak ties are created, etc.
+						- trust each other
+
+					* Kanban board
+					- formalisation des process de production dans les usines japonaises
+					- visualiser le process de production (workflow) à l'aide de vignettes : TodoDoingDone
+					- set limit to WIP
+
+					* design thinking
+					- result from a fusion of analytic (science) and synthesis approach (deisgners/architects)
+					- scientists :
+						- break out complex problems into several less complex pb
+						- font des analyses poussées
+						- problem-focused
+					- designers :
+						- rassembles d'abord les éléments de connaissances sur un pb
+						- think of solution to try out
+						- solution-focused
+					REF :— Bryan Lawson, How Designers Think[11]
+					- Design thinking process
+					http://dschool.stanford.edu/wp-content/uploads/2012/02/steps-730x345.png
+					-- design for human
+
+				</section>
+				<!-- TITRE -->
 				<section data-markdown>
 
 					<script type="text/template">
-						![logo](media/logo_cult-num.png "logo CN")
-
-						Développement des modules de cours Culture Numérique - Université Lille 3
+						Gestion de projets collaboratifs:  
+							Principes et outils 
+							  
+						*Freddy Limpens*
 				    </script>
 
 				</section>
+				<!--  1. Approche agile -->
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							###Objectif 1 :
-							Faciliter la collaboration des contributeurs
+							###1. Approche agile
 						</script>
 					</section>
 
 					<section data-markdown>
 						<script type="text/template">
-							Partage et gestion des versions via
-							<a href="http://github.com/CultureNumerique/cn_modules" target="_blank">un dépôt git</a>
-
-
+							Agilité versus :
+							- planification longue
+							- cahier des charges exhaustifs
+							- resistances aux changements en cours de projet
 					    </script>
 
 					</section>
 
 					<section data-markdown>
 						<script type="text/template">
-							Edition sur format ouverts et portables:
-							Contenu de cours au format text/ORG
-
-							```
-							* Titre
-							** Sous-titre
-							La représentation numérique d'une information peut être enrichie pour faciliter les traitements relatifs
-							à de telles tâches.
-							*************** Animation
-							Ici on illustre que dans le codage on ajoute des meta-données.
-							*************** END
-							*************** Activité
-							( quizz au format GIFT)
-							*************** END
-							```
+							**Leçon 1 :**  
+							![planing is guessing](media/planning_is_guessing.jpg)
 
 						</script>
 					</section>
-
+					
 					<section data-markdown>
 						<script type="text/template">
-							Evaluations et devoirs en .GIFT
-
-							```
-							::1.1.1 Quizz (Q2/3)::[html] Que signifie "numérisation" ? {
-							=L’opération qui consiste à représenter sous forme de nombres une information quelle qu’elle soit.
-								#Oui ! Votre réponse est correcte.
-							~L’opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).
-								# Non, citer tous les nombres c’est compter... Votre réponse est incorrecte.
-							}
-							```
-					    </script>
+							- découper en courtes itérations
+							- décider juste avant de faire pas 6 mois à l'avance
+							- impliquer les parties prenantes 
+							- se faire confiance
+						</script>
 					</section>
-
+					
 					<section data-markdown>
 						<script type="text/template">
-							Export automatisés via scripts depuis le document de travail:
-							- toHTML.py
-							- toMoodle.py
-							- toEdx.py (soon...)
+							**Leçon 2 :**  
+							Meetings are toxic  
+							![meetings are toxic](media/meetings_are_toxic.jpg)
+
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							- stands up meeting quotidien ou régulier
+							- maximum possible offline + échanges informels fréquents
+							
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							** Leçon3 : Les bons outils pour chaque usage:**  
+							- plannifier
+							- documents partagés
+							- échange synchrones/asynchrones en contexte(chat, forum, etc.)
+							- diffusion d'info							
+						</script>
+					</section>
+				</section>
+				<!--  2. Design thinking -->
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+						###2. Design Thinking
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						Le *Design thinking* résulte de la fusion de 2 approches:  
+						- Analytique (scientifiques) et *problem-based*
+						- Synthétique (designers/architectes) et *solution-based*
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						Design thinking process
+						![design_thinking](media/design_thinking.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							User stories ~ scénario utilisateurs:  
+							> It captures the 'who', 'what' and 'why' of a requirement in a simple, concise way, often limited in detail by what can be hand-written on a small paper notecard.
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						Design thinking process:
+						- EMPATHIZE: Work to fully understand the experience of the user for whom you are designing.  
+						- DEFINE: Process and synthesize the findings from your empathy work in order to form a user point of view that you will address with your design.
+						- IDEATE: Explore a wide variety of possible solutions through generating a large quantity of diverse possible solutions; brainstorm
+						- PROTOTYPE: Transform your ideas into a physical form so that you can experience and interact with
+						- TEST: Try out, use observations and feedback to refine prototypes, learn more about the user, and refine 
 						</script>
 					</section>
 				</section>
 
+				<!--  3. Kanban board -->
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							###Objectif 2 :
-							Diffuser plus largement les contenus
+							###3. Kanban:  
+							Visualiser le processus de production
 						</script>
 					</section>
-
+					<section >
+						
+							<p>Approche issue du management des usines de production Toyota, Japon </p> 
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/0ZEgluZJpBM" frameborder="0" allowfullscreen></iframe>
+						
+					</section>
 					<section data-markdown>
 						<script type="text/template">
-							contenu disponible en "grains" modulables et réutilisables
-							- devoirs
-							- auto-evaluations
-							- cours
-							- videos
-					    </script>
+							- *demand-driven*: pour une production Just In Time
+							- Une *Kanban-card* suit le produit pendant le process
+							- limiter le nb de **WIP** *(Work In Progress)*
+						</script>
 					</section>
-
 					<section data-markdown>
 						<script type="text/template">
-							* Publication du "code source" sur un dépôt ouvert, en licence CC: <a href="http://github.com/CultureNumerique/cn_modules" target="_blank">Fork us!</a>
-							* <a href="http://culturenumerique.github.io/cn_modules/" data-preview-link>Site Vitrine</a>
-					    </script>
+							![kanban board](media/Simple-kanban-board-.jpg)
+						</script>
 					</section>
-
 				</section>
+				<!--  4. Outils -->
 				<section>
+					<section >
+						<h3>Les outils</h3>
+						<img src="media/boite-outils.png" alt="" height="400" />
+				
+					</section>
 					<section data-markdown>
 						<script type="text/template">
-							###Perspectives
-							- autres plateformes
-							- niveaux
-							- internationalisation
-							- plateforme exports personnalisés
+							**Organiser**  :
+							- découper en tâches
+							- répartir le travail
+							- visualiser le déroulement du projet
+							- Flexibilité très élevée => entropie forte
+							
+							**Exemples:**
+							- [Trello](https://trello.com)
+							- [Framasoft](http://framasoft.org/)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							**Prise de notes**
+							- Compte rendus live
+							- draft
+							
+							**Exemples:**  
+							- [Framapad](https://framapad.org/)
+							- [EtherPad](http://etherpad.org)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							**Décider**
+							- sondage
+							- réunions
+							- prise de décision
+							
+							**Exemples:**  
+							- [Framadate](https://framadate.org/)
+							- [Loomio](https://www.loomio.org/)
+							- [Doodle](http://doodle.com)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							**Ecrire/produire à plusieurs**
+							- stocker des documents partagés
+							- écrire un document à plusieurs mains
+							- co-édition de contenu public
+							
+							**Exemples:**
+							- GDrive/GDocs
+							- Autre stockage partagé (DropBox, etc)
+							- les wikis ()
+							- les CMS (WordPress, Drupal, etc)
+							- Framasoft
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							**Autres communiquations**
+							- obtenir une info rapidement
+							> chat, fb, mail, etc 
+							- questions/réponses au collectif 
+							> forum, mail, etc.
+							- diffusion, annonces
+							> mailing list, fb, mail
+							**Exemples**
+							FB/Google/Yahoo Groups
+							chat: jabber, irc, GoogleTalk, FB, etc
 						</script>
 					</section>
 				</section>
-
+				<!--  5. Credits -->
 				<section data-markdown>
 					<script type="text/template">
 						### Merci !
-						freddy.limpens@univ-lille3.fr
+						freddy.limpens@gmail.com
 					</script>
 				</section>
 			</div>
